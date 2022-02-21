@@ -1,0 +1,208 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: maroon;
+}
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./headerBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+.quiz-title{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: crimson;
+}
+
+.quiz-title > h1{
+    font-size: 4rem;
+    text-shadow: 2px 2px 2px black;
+}
+
+.quiz-title > span{
+    font-size: 2rem;
+}
+
+.header-container > section > p{
+    font-size: 2.5rem;
+    color: crimson;
+    text-shadow: 2px 2px 2px black;
+}
+
+.questions-container{
+    padding: 16px;
+    margin-top: 340px;
+    height: 700px;
+    font-size: 25px;
+    background-color: white;
+    height: 100%;
+}
+
+.score{
+    visibility:hidden;
+}
+
+.sub-title{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.sub-title > h2{
+    letter-spacing: 18px;
+    text-shadow: 2px 2px 4px white;
+    text-transform: uppercase;
+}
+
+.Q-wrapper{
+    padding-left: 100px;
+    padding-right: 40px;
+}
+
+.Q-wrapper > form > button{
+    width: 100%;
+    height: 40vh;
+    margin: 0 auto;
+    background-image: url('https://c.tenor.com/Vbh13wIVHYgAAAAC/batman-batsignal.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 2px 4px 8px white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: none;
+    font-size: 8rem;
+    letter-spacing: 10px;
+    cursor: pointer;
+}
+
+.question{
+    -webkit-box-shadow: 5px 5px 9px 5px rgba(0,0,0,0.25); 
+    box-shadow: 5px 5px 9px 5px rgba(0,0,0,0.25);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.question:nth-child(1){
+    margin-top: 25px;
+}
+.question:last-child{
+    margin-bottom: 25px;
+}
+.question > aside{
+    margin-bottom: 32px;
+}
+.question > aside > p{
+    margin: 0;
+    font-weight: bolder;
+}
+.question > div > input, label{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 989px) {
+    /* Header Section */
+      .quiz-title > h1{
+        font-size: 3rem;
+    }
+    .quiz-title > span{
+        font-size: 1.5rem;
+    }
+    .header-container > section > p{
+        font-size: 2rem;
+    }
+    .questions-container{
+        margin-top: 260PX;
+        font-size: 20px;
+    }
+    .sub-title > h2{
+        letter-spacing: normal;
+    }
+    .Q-wrapper{
+        padding-left: 40px;
+    }
+    .Q-wrapper > form{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 744px) {
+     /* Header Section */
+    .quiz-title{
+        width: 100%;
+    }
+    .quiz-title > h1{
+        font-size: 2rem;
+    }
+    .quiz-title > span{
+        font-size: 1rem;
+    }
+    .header-container > section > p{
+        font-size: 1.3rem;
+    }
+    .questions-container{
+        margin-top: 175PX;
+    }
+    .sub-title > h2{
+        font-size: 20px;
+    }
+    .Q-wrapper{
+        padding: 5px;
+    }
+    .Q-wrapper > form{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 352px) {
+     /* Header Section */
+    .quiz-title > h1{
+      font-size: 1rem;
+    }
+    .quiz-title > span{
+        font-size: .5rem;
+    }
+    .header-container > section > p{
+        font-size: .8rem;
+    }
+    .questions-container{
+        margin-top: 90PX;
+        font-size: 13px;
+    }
+    .sub-title > h2{
+        font-size: 15px;
+    }
+    .question > div > input, label{
+        margin-bottom: 10px;
+    }
+}
